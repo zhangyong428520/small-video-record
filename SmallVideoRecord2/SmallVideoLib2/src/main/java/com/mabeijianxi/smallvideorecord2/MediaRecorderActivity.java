@@ -614,7 +614,7 @@ public class MediaRecorderActivity extends Activity implements
             intent.putExtra(MediaRecorderActivity.VIDEO_URI, mMediaObject.getOutputTempTranscodingVideoPath());
             intent.putExtra(MediaRecorderActivity.VIDEO_SCREENSHOT, mMediaObject.getOutputVideoThumbPath());
             intent.putExtra("go_home", GO_HOME);
-            startActivity(intent);
+            setResult(105,intent);
         } catch (ClassNotFoundException e) {
             throw new IllegalArgumentException("需要传入录制完成后跳转的Activity的全类名");
         }
